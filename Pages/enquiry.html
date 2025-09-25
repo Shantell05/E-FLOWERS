@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make an Enquiry - Eleve Flowers</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body  background="/Assests/Back ground.jpg">
+
+     <header>
+        <div class="header-content">
+            <img src="/Assests/Logo.jpg" alt="Eleve Flowers Logo" class="logo" width="120" height="120">
+         <nav style="margin-top: 15px;">
+            <a href="../index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
+            <a href="about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
+            <a href="services.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Services</a>
+            <a href="enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
+            <a href="contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
+        </nav>    
+        </div>
+    </header>
+
+    <main style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <h1 style="color: blueviolet; text-align: center;">MAKE AN ENQUIRY</h1>
+        
+        <section style="background-color: white; padding: 30px; border-radius: 10px;">
+            <h2 style="color: blueviolet;">Request a Quote</h2>
+            <p>Please fill out the form below and we'll get back to you within 24 hours.</p>
+            
+            <!-- Simple Enquiry Form -->
+            <form style="margin-top: 20px;">
+                <div style="margin-bottom: 15px;">
+                    <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Full Name:</label>
+                    <input type="text" id="name" name="name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email Address:</label>
+                    <input type="email" id="email" name="email" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="phone" style="display: block; margin-bottom: 5px; font-weight: bold;">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="service" style="display: block; margin-bottom: 5px; font-weight: bold;">Service Needed:</label>
+                    <select id="service" name="service" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                        <option value="">Select a service</option>
+                        <option value="bouquet">Handcrafted Bouquet</option>
+                        <option value="wedding">Wedding Arrangements</option>
+                        <option value="subscription">Flower Subscription</option>
+                        <option value="custom">Custom Design</option>
+                        <option value="event">Event Flowers</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Message:</label>
+                    <textarea id="message" name="message" rows="5" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Please provide details about your floral needs..."></textarea>
+                </div>
+                
+                <button type="submit" style="background-color: blueviolet; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">Submit Enquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>&copy; 2025 Eleve Flowers - Where Petals Meet Elegance. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
