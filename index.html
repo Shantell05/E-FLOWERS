@@ -4,47 +4,251 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eleve Flowers - Home</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Eleve Flowers - Premium floral arrangements in Johannesburg. Wedding flowers, event decor, and fresh bouquets. Same-day delivery available.">
+    <meta name="keywords" content="Eleve Flowers, Johannesburg florist, wedding flowers, floral arrangements, fresh bouquets">
+    <meta name="author" content="Eleve Flowers">
 </head>
-<body background="/Assests/Back ground.jpg">
+<body   background="/Assests/Back ground.jpg">  
     <header>
         <div class="header-content">
-            <img src="/Assests/Logo.jpg" alt="Eleve Flowers Logo" class="logo" width="120" height="120">
-              <nav style="margin-top: 15px;">
-            <a href="/index.html" style="margin: 0 15px; text-decoration: none; color:blueviolet; font-weight: bold;">Home</a>
-            <a href="/Pages/about.html" style="margin: 0 15px; text-decoration: none; color:blueviolet; font-weight: bold;">About Us</a>
-            <a href="/Pages/services.html" style="margin: 0 15px; text-decoration: none; color:blueviolet; font-weight: bold;">Services</a>
-            <a href="/Pages/enquiry.html" style="margin: 0 15px; text-decoration: none; color:blueviolet; font-weight: bold;">Enquiry</a>
-            <a href="/Pages/contact.html" style="margin: 0 15px; text-decoration: none; color:blueviolet; font-weight: bold;">Contact</a>
-        </nav>
+             <img src="/Assests/Logo.jpg" alt="Eleve Flowers Logo" class="logo" width="120" height="120">
+            <nav style="margin-top: 15px;">
+                <a href="index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
+                <a href="Pages/about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
+                <a href="Pages/services.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Services</a>
+                <a href="Pages/enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
+                <a href="Pages/contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
+            </nav>
         </div>
     </header>
 
     <main>
+        <!-- Real-time Clock Widget -->
+        <div class="content-box" style="text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+            <div id="time-greeting" style="font-size: 1.3em; margin-bottom: 10px;">🌅 Good Morning!</div>
+            <div id="real-time-clock" style="font-size: 2.5em; font-weight: bold; font-family: 'Courier New', monospace; margin: 15px 0;">00:00:00</div>
+            <div id="current-date" style="font-size: 1.1em; margin-bottom: 15px;">Loading date...</div>
+            <div id="store-status" style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; display: inline-block;">
+                <span style="color: #28a745;">🟢 OPEN NOW</span>
+            </div>
+        </div>
+
         <h1 class="page-title">Welcome to Eleve Flowers</h1>
         
         <div class="content-box">
             <h2 class="section-title">Where Petals Meet Elegance</h2>
-            <p> Eleve Flowers is a premium floral design business. Where every bloom tells a story.
-          Discover our exquisite collection of handcrafted floral arrangements, designed to elevate your moments and leave a lasting impression.
-          The company specialists in creating unique, hancrafted bouquets and flower arrangements for a range of occasions.
-          We believe that flowers are more than just petals and stems they're a language of love, a symbol of celebrattion,
-          and a whisper of comfort. Our blooms are carefully hancrafted to bring your momemts to life, whether it's a wedding,
-          a milestone, or simply a Tuesday that needs a little brightening. Explore our seasonal collections, each on a reflection
-          of nature's beauty and our passion for floral art.</p>
+            <p>Eleve Flowers is a premium floral design business where every bloom tells a story.
+            Discover our exquisite collection of handcrafted floral arrangements, designed to elevate your moments and leave a lasting impression.
+            The company specialists in creating unique, handcrafted bouquets and flower arrangements for a range of occasions.
+            We believe that flowers are more than just petals and stems they're a language of love, a symbol of celebration,
+            and a whisper of comfort. Our blooms are carefully handcrafted to bring your moments to life, whether it's a wedding,
+            a milestone, or simply a Tuesday that needs a little brightening. Explore our seasonal collections, each one a reflection
+            of nature's beauty and our passion for floral art.</p>
         </div>
 
+        <!-- Interactive Image Gallery -->
         <div class="content-box">
-            <h2 class="section-title">Featured Arrangement</h2>
+            <h2 class="section-title">Our Floral Gallery</h2>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="/Assests/Flower 2.jpg " alt="Beautiful flower arrangement from Eleve Flowers" class="gallery-image" 
+                         onclick="openLightbox('/Assests/Flower 2.jpg ', 'Signature Rose Elegance Bouquet')">
+                    <div class="gallery-caption">
+                        <h3>Signature Rose Elegance</h3>
+                        <p>Our premium rose bouquet</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/Assests/Flower 4.jpeg  " alt="Colorful mixed flower bouquet" class="gallery-image"
+                         onclick="openLightbox(' /Assests/Flower 4.jpeg', 'Spring Mixed Bouquet')">
+                    <div class="gallery-caption">
+                        <h3>Spring Mixed Bouquet</h3>
+                        <p>Fresh seasonal flowers</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/Assests/Flower 6.jpeg  " alt="Elegant wedding flower arrangement" class="gallery-image"
+                         onclick="openLightbox('/Assests/Flower 6.jpeg   ', 'Wedding Special Arrangement')">
+                    <div class="gallery-caption">
+                        <h3>Wedding Special</h3>
+                        <p>Perfect for ceremonies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Feature -->
+        <div class="content-box">
+            <h2 class="section-title">Find Your Perfect Flowers</h2>
             <div style="text-align: center;">
-                <img src="/Assests/Flower 2.jpg"  height= "100% " width="100%" Flower Arrangement" style="max-width: 100%; height: auto; border-radius: 5px;">
+                <input type="text" id="searchInput" placeholder="🔍 Search for wedding, roses, bouquets..." 
+                       style="width: 80%; max-width: 400px; padding: 12px; border: 2px solid #8a2be2; border-radius: 25px; font-size: 1em;">
+                <div id="searchResults" style="display: none; margin-top: 10px; text-align: left; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"></div>
+            </div>
+        </div>
+
+        <!-- Service Tabs -->
+        <div class="content-box">
+            <h2 class="section-title">Our Services</h2>
+            <div class="tab-system">
+                <div class="tab-buttons">
+                    <button class="tab-button active" onclick="openTab('wedding')">Wedding Flowers</button>
+                    <button class="tab-button" onclick="openTab('events')">Event Decor</button>
+                    <button class="tab-button" onclick="openTab('bouquets')">Daily Bouquets</button>
+                </div>
+                
+                <div id="wedding" class="tab-content active">
+                    <h3>Wedding Floral Arrangements</h3>
+                    <p>Create your dream wedding with our bespoke floral designs. From bridal bouquets to venue decorations.</p>
+                </div>
+                
+                <div id="events" class="tab-content">
+                    <h3>Event Floral Decor</h3>
+                    <p>Transform your events with stunning floral arrangements for corporate events, parties, and special occasions.</p>
+                </div>
+                
+                <div id="bouquets" class="tab-content">
+                    <h3>Daily Fresh Bouquets</h3>
+                    <p>Brighten any day with our handcrafted bouquets featuring seasonal flowers and elegant arrangements.</p>
+                </div>
             </div>
         </div>
 
     </main>
 
     <footer>
-        <p>&copy;  2025 Eleve Flowers - Where Petals Meet Elegance. All rights reserved.</p>
+        <p>&copy; 2025 Eleve Flowers - Where Petals Meet Elegance. All rights reserved.</p>
+        <p>Current Time: <span id="footer-time"></span></p>
     </footer>
-</body>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <script>
+        // Real-time Clock Functionality
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-ZA');
+            const dateString = now.toLocaleDateString('en-ZA', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            document.getElementById('real-time-clock').textContent = timeString;
+            document.getElementById('current-date').textContent = dateString;
+            document.getElementById('footer-time').textContent = timeString;
+            
+            // Update greeting based on time
+            const hours = now.getHours();
+            const greetingElement = document.getElementById('time-greeting');
+            if (hours < 12) {
+                greetingElement.innerHTML = '🌅 Good Morning!';
+            } else if (hours < 18) {
+                greetingElement.innerHTML = '☀️ Good Afternoon!';
+            } else {
+                greetingElement.innerHTML = '🌙 Good Evening!';
+            }
+        }
+        
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Store Status
+        function updateStoreStatus() {
+            const now = new Date();
+            const hour = now.getHours();
+            const statusElement = document.getElementById('store-status');
+            
+            if (hour >= 8 && hour < 18) {
+                statusElement.innerHTML = '<span style="color: #28a745;">🟢 OPEN NOW</span>';
+            } else {
+                statusElement.innerHTML = '<span style="color: #dc3545;">🔴 CLOSED</span>';
+            }
+        }
+        updateStoreStatus();
+
+        // Image Gallery Lightbox
+        function openLightbox(imageSrc, caption) {
+            document.getElementById('lightbox').style.display = "block";
+            document.getElementById('lightbox-img').src = imageSrc;
+            document.getElementById('lightbox-caption').textContent = caption;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = "none";
+        }
+
+        // Search Functionality
+        const searchData = [
+            { title: "Wedding Bouquets", page: "Pages/services.html" },
+            { title: "Rose Arrangements", page: "Pages/services.html" },
+            { title: "Event Flowers", page: "Pages/services.html" },
+            { title: "Contact Us", page: "Pages/contact.html" },
+            { title: "Make Enquiry", page: "Pages/enquiry.html" }
+        ];
+
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const resultsDiv = document.getElementById('searchResults');
+            
+            if (query.length < 2) {
+                resultsDiv.style.display = 'none';
+                return;
+            }
+            
+            const results = searchData.filter(item => 
+                item.title.toLowerCase().includes(query)
+            );
+            
+            if (results.length > 0) {
+                resultsDiv.innerHTML = results.map(item => 
+                    `<div style="padding: 10px; border-bottom: 1px solid #eee; cursor: pointer;" 
+                          onclick="window.location.href='${item.page}'">
+                     <strong>${item.title}</strong>
+                     </div>`
+                ).join('');
+                resultsDiv.style.display = 'block';
+            } else {
+                resultsDiv.innerHTML = '<div style="padding: 10px;">No results found</div>';
+                resultsDiv.style.display = 'block';
+            }
+        });
+
+        // Tab System
+        function openTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+            
+            // Remove active class from all buttons
+            const tabButtons = document.getElementsByClassName('tab-button');
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+            
+            // Show current tab and set button as active
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Close search results when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.matches('#searchInput')) {
+                document.getElementById('searchResults').style.display = 'none';
+            }
+        });
+    </script>
+
+ </body>
 </html>

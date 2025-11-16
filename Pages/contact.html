@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Eleve Flowers</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact Eleve Flowers in Polokwane. Visit our shop at 5A Kerk Street, call 065 896 6276, or email info@eleveflowers.co.za">
+    <meta name="keywords" content="contact Eleve Flowers, Polokwane florist, flower shop contact">
 </head>
-<body background="/Assests/Back ground.jpg">
+<body   background="/Assests/Back ground.jpg"> 
     <header>
         <div class="header-content">
-            <img src="/Assests/Logo.jpg" alt="Eleve Flowers Logo" class="logo" width="120" height="120">
-         <nav style="margin-top: 15px;">
-            <a href="../index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
-            <a href="about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
-            <a href="services.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Services</a>
-            <a href="enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
-            <a href="contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
-        </nav>    
+             <img src="/Assests/Logo.jpg" alt="Eleve Flowers Logo" class="logo" width="120" height="120">
+            <nav style="margin-top: 15px;">
+                <a href="../index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
+                <a href="about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
+                <a href="services.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Services</a>
+                <a href="enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
+                <a href="contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
+            </nav>    
         </div>
     </header>
 
@@ -28,15 +32,24 @@
             <table class="contact-table">
                 <tr>
                     <td>Phone Number:</td>
-                    <td>065 896 6276</td>
+                    <td>
+                        <span id="phone-number">065 896 6276</span>
+                        <button onclick="copyToClipboard('0658966276', 'Phone number')" style="margin-left: 10px; background: #8a2be2; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">Copy</button>
+                    </td>
                 </tr>
                 <tr>
                     <td>Address:</td>
-                    <td>5A Kerk(Church) Street, Polokwane, 0700</td>
+                    <td>
+                        <span id="store-address">5A Kerk(Church) Street, Polokwane, 0700</span>
+                        <button onclick="copyToClipboard('5A Kerk Street, Polokwane, 0700', 'Address')" style="margin-left: 10px; background: #8a2be2; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">Copy</button>
+                    </td>
                 </tr>
                 <tr>
                     <td>Email:</td>
-                    <td>info@eleveflowers.co.za</td>
+                    <td>
+                        <a href="mailto:info@eleveflowers.co.za" id="email-address">info@eleveflowers.co.za</a>
+                        <button onclick="copyToClipboard('info@eleveflowers.co.za', 'Email')" style="margin-left: 10px; background: #8a2be2; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">Copy</button>
+                    </td>
                 </tr>
                 <tr>
                     <td>Business Hours:</td>
@@ -45,19 +58,51 @@
             </table>
         </div>
 
+        <!-- Interactive Map -->
         <div class="content-box">
             <h2 class="section-title">Find Our Shop</h2>
-            <div style="text-align: center;">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.1444787148284!2d29.449117274592723!3d-23.91993747486225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d78f7183cc21%3A0x3d5dd6151ca989e!2s5%20Kerk%20St%2C%20Polokwane%20Central%2C%20Polokwane%2C%200700!5e0!3m2!1sen!2sza!4v1234567890"
-                    width="100%" 
-                    height="300" 
-                    style="border:0; border-radius: 5px;" 
-                    allowfullscreen>
-                </iframe>
+            <div id="interactive-map" style="height: 300px; background: #f8f5ff; border-radius: 8px; position: relative; border: 2px solid #8a2be2;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                    <div style="font-size: 3em; margin-bottom: 10px;">📍</div>
+                    <h3>Eleve Flowers - Polokwane</h3>
+                    <p>5A Kerk Street, Polokwane Central</p>
+                    <button onclick="openGoogleMaps()" class="btn" style="margin-top: 10px;">Get Directions</button>
+                </div>
+                <!-- Map Markers -->
+                <div onclick="showLocationInfo('main-store')" style="position: absolute; top: 45%; left: 48%; font-size: 2em; cursor: pointer; transition: transform 0.3s ease;" 
+                     onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                    📍
+                </div>
             </div>
         </div>
 
+        <!-- Quick Contact Form -->
+        <div class="content-box">
+            <h2 class="section-title">Quick Message</h2>
+            <form id="quick-contact-form" onsubmit="validateContactForm(event)">
+                <div class="form-group">
+                    <label for="name" class="form-label">Your Name *</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name">
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Message *</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="How can we help you today?" rows="4"></textarea>
+                    <div class="error-message" id="message-error"></div>
+                </div>
+                
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Methods with Interactive Features -->
         <div class="content-box">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-methods">
@@ -65,23 +110,133 @@
                     <div class="contact-icon">📞</div>
                     <h3>Call Us</h3>
                     <p>065 896 6276</p>
+                    <button class="btn" onclick="makePhoneCall()">Call Now</button>
                 </div>
                 <div class="contact-method">
                     <div class="contact-icon">📧</div>
                     <h3>Email Us</h3>
                     <p>info@eleveflowers.co.za</p>
+                    <button class="btn" onclick="sendEmail()">Send Email</button>
                 </div>
                 <div class="contact-method">
                     <div class="contact-icon">📍</div>
                     <h3>Visit Us</h3>
-                    <p>5A Kerk (Church) Street, Polokwane, 0700</p>
+                    <p>5A Kerk Street, Polokwane, 0700</p>
+                    <button class="btn" onclick="openGoogleMaps()">Get Directions</button>
                 </div>
             </div>
         </div>
+
     </main>
 
     <footer>
         <p>&copy;  2025 Eleve Flowers - Where Petals Meet Elegance. All rights reserved.</p>
     </footer>
+
+    <!-- Notification Element -->
+    <div id="notification" style="display: none; position: fixed; top: 20px; right: 20px; background: #28a745; color: white; padding: 15px 20px; border-radius: 5px; z-index: 1000;"></div>
+
+    <script>
+        // Copy to Clipboard Function
+        function copyToClipboard(text, type) {
+            navigator.clipboard.writeText(text).then(function() {
+                showNotification(`${type} copied to clipboard!`);
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+
+        // Show Notification
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.style.display = 'block';
+            notification.style.background = '#28a745';
+            
+            setTimeout(function() {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        // Show Error Notification
+        function showError(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.style.display = 'block';
+            notification.style.background = '#dc3545';
+            
+            setTimeout(function() {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        // Contact Form Validation
+        function validateContactForm(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            let isValid = true;
+            
+            // Clear previous errors
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+            
+            // Validate name
+            if (name === '') {
+                document.getElementById('name-error').textContent = 'Please enter your name';
+                isValid = false;
+            }
+            
+            // Validate email
+            if (email === '') {
+                document.getElementById('email-error').textContent = 'Please enter your email';
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                document.getElementById('email-error').textContent = 'Please enter a valid email address';
+                isValid = false;
+            }
+            
+            // Validate message
+            if (message === '') {
+                document.getElementById('message-error').textContent = 'Please enter your message';
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Simulate form submission
+                showNotification('Thank you! Your message has been sent. We will contact you soon.');
+                document.getElementById('quick-contact-form').reset();
+            }
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Interactive Map Functions
+        function openGoogleMaps() {
+            const address = encodeURIComponent('5A Kerk Street, Polokwane, 0700');
+            window.open(`https://www.google.com/maps/dir/?api=1&destination=${address}`, '_blank');
+        }
+
+        function showLocationInfo(location) {
+            if (location === 'main-store') {
+                alert('📍 Eleve Flowers Main Store\n5A Kerk Street, Polokwane Central\n📞 065 896 6276\n🕒 Mon-Fri: 8AM-6PM');
+            }
+        }
+
+        // Contact Action Functions
+        function makePhoneCall() {
+            window.open('tel:0658966276');
+        }
+
+        function sendEmail() {
+            window.open('mailto:info@eleveflowers.co.za');
+        }
+    </script>
+
 </body>
 </html>

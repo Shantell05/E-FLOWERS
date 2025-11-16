@@ -1,163 +1,364 @@
  <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Eleve Flowers</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Our Services - Eleve Flowers | Premium Floral Arrangements Johannesburg</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover Eleve Flowers' premium floral services in Johannesburg. Wedding arrangements, handcrafted bouquets, flower subscriptions, and custom designs.">
+    <meta name="keywords" content="Eleve Flowers services, wedding flowers Johannesburg, floral arrangements, flower bouquets, flower subscription, custom floral designs">
+    <meta name="author" content="Eleve Flowers">
 </head>
- <body background="/Assests/Back ground.jpg">
+<body  background="/Assests/Back ground.jpg">
     <header>
         <div class="header-content">
-            <img src="/Assests/Logo.jpg" alt="Eleve Flowers Logo" class="logo" width="120" height="120">
-         <nav style="margin-top: 15px;">
-            <a href="../index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
-            <a href="about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
-            <a href="services.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Services</a>
-            <a href="enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
-            <a href="contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
-        </nav>    
+            <img src="/Assests/Logo.jpg" alt="Eleve Flowers Logo - Premium floral design company" class="logo" width="120" height="120">
+            <nav style="margin-top: 15px;">
+                <a href="../index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
+                <a href="about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
+                <a href="services.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Services</a>
+                <a href="enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
+                <a href="contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
+            </nav>    
         </div>
     </header>
 
     <main>
-        <h1 class="page-title">Our Floral Services</h1>
-        <p class="text-center" style="margin-bottom: 30px;">At Eleve Flowers, every bloom is carefully chosen to tell a story.</p>
+        <h1 class="page-title">Our Premium Floral Services</h1>
+        <p class="text-center" style="margin-bottom: 30px; font-size: 1.2em;">At Eleve Flowers, every bloom is carefully chosen to tell your unique story</p>
+
+        <!-- Service Filter Tabs -->
+        <div class="content-box" style="text-align: center;">
+            <h2 class="section-title">Browse Our Services</h2>
+            <div class="service-filter">
+                <button class="filter-btn active" onclick="filterServices('all')">All Services</button>
+                <button class="filter-btn" onclick="filterServices('bouquets')">Bouquets</button>
+                <button class="filter-btn" onclick="filterServices('wedding')">Wedding</button>
+                <button class="filter-btn" onclick="filterServices('subscription')">Subscriptions</button>
+                <button class="filter-btn" onclick="filterServices('custom')">Custom Designs</button>
+            </div>
+        </div>
 
         <!-- Handcrafted Bouquets -->
-        <div class="content-box">
-            <h2 class="section-title">Handcrafted Bouquets</h2>
+        <div class="content-box service-item" data-category="bouquets">
+            <h2 class="section-title">💐 Handcrafted Bouquets</h2>
             <div class="image-gallery">
                 <div class="gallery-item">
-                    <img src="/Assests/Image 2.jpg" alt="Beautiful rose bouquet">
-                    <div class="gallery-caption">Classic Rose Bouquet</div>
+                    <img src="/Assests/Image 2.jpg  " alt="Beautiful rose bouquet from Eleve Flowers" class="gallery-image" 
+                         onclick="openLightbox(' /Assests/Image 2.jpg  ', 'Classic Rose Bouquet - Eleve Flowers')">
+                    <div class="gallery-caption">
+                        <h3>Classic Rose Bouquet</h3>
+                        <p>From R250</p>
+                        <button class="btn" onclick="scrollToEnquiry()">Order Now</button>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/Assests/Image 5.jpg" alt="Mixed flower arrangement">
-                    <div class="gallery-caption">Mixed Flower Arrangement</div>
+                    <img src="/Assests/Image 5.jpg  " alt="Mixed flower arrangement by Eleve Flowers" class="gallery-image"
+                         onclick="openLightbox(' /Assests/Image 5.jpg ', 'Mixed Flower Arrangement - Eleve Flowers')">
+                    <div class="gallery-caption">
+                        <h3>Mixed Flower Arrangement</h3>
+                        <p>From R380</p>
+                        <button class="btn" onclick="scrollToEnquiry()">Order Now</button>
+                    </div>
                 </div>
             </div>
-            <p>Perfect for birthdays, anniversaries, or "just because" moments.</p>
-            <p><strong>Flowers available:</strong></p>
-            <ul>
-                <li>Roses (classic reds, soft pinks, whites)</li>
-                <li>Lilies (stargazer, oriental, calla lilies)</li>
-                <li>Gerberas (bright and cheerful)</li>
-                <li>Tulips (seasonal)</li>
-                <li>Sunflowers (for a touch of warmth)</li>
-            </ul>
+            
+            <!-- Accordion for Bouquet Details -->
+            <div class="accordion">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    📋 Bouquet Details & Flower Options
+                </div>
+                <div class="accordion-content">
+                    <p>Perfect for birthdays, anniversaries, or "just because" moments. Each bouquet is handcrafted with care and attention to detail.</p>
+                    <p><strong>Flowers available:</strong></p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+                        <div style="background: #f8f5ff; padding: 15px; border-radius: 8px;">
+                            <strong>Roses</strong><br>
+                            Classic reds, soft pinks, pure whites
+                        </div>
+                        <div style="background: #f8f5ff; padding: 15px; border-radius: 8px;">
+                            <strong>Lilies</strong><br>
+                            Stargazer, oriental, calla lilies
+                        </div>
+                        <div style="background: #f8f5ff; padding: 15px; border-radius: 8px;">
+                            <strong>Seasonal</strong><br>
+                            Tulips, sunflowers, gerberas
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Wedding Arrangements -->
-        <div class="content-box">
-            <h2 class="section-title">Wedding & Event Arrangements</h2>
+        <div class="content-box service-item" data-category="wedding">
+            <h2 class="section-title">💍 Wedding & Event Arrangements</h2>
             <div class="image-gallery">
                 <div class="gallery-item">
-                    <img src="/Assests/Flower 7.jpeg" alt="Bridal bouquet">
-                    <div class="gallery-caption">Elegant Bridal Bouquet</div>
+                    <img src="/Assests/Flower 7.jpeg " alt="Elegant bridal bouquet by Eleve Flowers" class="gallery-image"
+                         onclick="openLightbox(' /Assests/Flower 7.jpeg', 'Elegant Bridal Bouquet - Eleve Flowers')">
+                    <div class="gallery-caption">
+                        <h3>Elegant Bridal Bouquet</h3>
+                        <p>From R2,000</p>
+                        <button class="btn" onclick="scrollToEnquiry()">Get Quote</button>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/Assests/Flower 8.jpeg" alt="Wedding centerpiece">
-                    <div class="gallery-caption">Wedding Centerpiece</div>
+                    <img src="/Assests/Flower 8.jpeg " alt="Wedding centerpiece arrangement" class="gallery-image"
+                         onclick="openLightbox(' /Assests/Flower 8.jpeg', 'Wedding Centerpiece - Eleve Flowers')">
+                    <div class="gallery-caption">
+                        <h3>Wedding Centerpiece</h3>
+                        <p>From R500 each</p>
+                        <button class="btn" onclick="scrollToEnquiry()">Get Quote</button>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/Assests/Image 6.jpeg" alt="Ceremony flowers">
-                    <div class="gallery-caption">Ceremony Floral Decor</div>
+                    <img src="/Assests/Image 6.jpeg  " alt="Ceremony floral decor by Eleve Flowers" class="gallery-image"
+                         onclick="openLightbox('/Assests/Image 6.jpeg ', 'Ceremony Floral Decor - Eleve Flowers')">
+                    <div class="gallery-caption">
+                        <h3>Ceremony Floral Decor</h3>
+                        <p>Custom Pricing</p>
+                        <button class="btn" onclick="scrollToEnquiry()">Get Quote</button>
+                    </div>
                 </div>
             </div>
-            <p>Transform your venue into a floral wonderland.</p>
-            <p><strong>Popular wedding flowers:</strong></p>
-            <ul>
-                <li>White Roses & Hydrangeas (for elegance)</li>
-                <li>Orchids (luxury touch)</li>
-                <li>Baby's Breath & Daisies (soft, delicate look)</li>
-                <li>Carnations (for volume and color variety)</li>
-            </ul>
+            
+            <div class="accordion">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    🎊 Complete Wedding Package Details
+                </div>
+                <div class="accordion-content">
+                    <p>Transform your venue into a floral wonderland with our comprehensive wedding services.</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px;">
+                        <div>
+                            <h4 style="color: #8a2be2;">Popular Wedding Flowers</h4>
+                            <ul>
+                                <li>White Roses & Hydrangeas (elegance)</li>
+                                <li>Orchids (luxury touch)</li>
+                                <li>Baby's Breath & Daisies (delicate look)</li>
+                                <li>Carnations (volume & color)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: #8a2be2;">Service Includes</h4>
+                            <ul>
+                                <li>Consultation & Planning</li>
+                                <li>Setup & Installation</li>
+                                <li>Same-day Fresh Flowers</li>
+                                <li>Post-event Cleanup</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Subscription Services -->
-        <div class="content-box">
-            <h2 class="section-title">Flower Subscriptions</h2>
+        <div class="content-box service-item" data-category="subscription">
+            <h2 class="section-title">📅 Flower Subscriptions</h2>
             <div class="image-gallery">
                 <div class="gallery-item">
-                    <img src="/Assests/Image 3.jpg" alt="Weekly flower delivery">
-                    <div class="gallery-caption">Weekly Flower Delivery</div>
+                    <img src="/Assests/Image 3.jpg  " alt="Weekly flower delivery service" class="gallery-image"
+                         onclick="openLightbox(' /Assests/Image 3.jpg ', 'Weekly Flower Delivery - Eleve Flowers')">
+                    <div class="gallery-caption">
+                        <h3>Weekly Flower Delivery</h3>
+                        <p>From R800/month</p>
+                        <button class="btn" onclick="showSubscriptionModal()">Subscribe</button>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/Assests/Flower 10.jpeg" alt="Office plant arrangement">
-                    <div class="gallery-caption">Office Plant Arrangement</div>
+                    <img src="/Assests/Flower 10.jpeg  " alt="Office plant arrangement service" class="gallery-image"
+                         onclick="openLightbox(' /Assests/Flower 10.jpeg', 'Office Plant Arrangement - Eleve Flowers')">
+                    <div class="gallery-caption">
+                        <h3>Office Plant Arrangement</h3>
+                        <p>From R1,200/month</p>
+                        <button class="btn" onclick="showSubscriptionModal()">Subscribe</button>
+                    </div>
                 </div>
             </div>
-            <p>Keep your spaces fresh all year round.</p>
-            <p><strong>Subscription options:</strong></p>
-            <ul>
-                <li>Seasonal Roses and Tulips</li>
-                <li>Indoor Peace Lilies</li>
-                <li>Greenery such as Ferns & Succulents</li>
-                <li>Mixed Seasonal Bouquets</li>
-            </ul>
+            
+            <div class="accordion">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    🌸 Subscription Options & Benefits
+                </div>
+                <div class="accordion-content">
+                    <p>Keep your spaces fresh and beautiful all year round with our flexible subscription plans.</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+                        <div style="text-align: center; background: #f8f5ff; padding: 20px; border-radius: 10px;">
+                            <h4 style="color: #8a2be2;">Weekly</h4>
+                            <p><strong>R800/month</strong></p>
+                            <p>Fresh flowers every week</p>
+                        </div>
+                        <div style="text-align: center; background: #f8f5ff; padding: 20px; border-radius: 10px;">
+                            <h4 style="color: #8a2be2;">Bi-weekly</h4>
+                            <p><strong>R600/month</strong></p>
+                            <p>Flowers every 2 weeks</p>
+                        </div>
+                        <div style="text-align: center; background: #f8f5ff; padding: 20px; border-radius: 10px;">
+                            <h4 style="color: #8a2be2;">Monthly</h4>
+                            <p><strong>R400/month</strong></p>
+                            <p>Monthly floral refresh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Custom Designs -->
-        <div class="content-box">
-            <h2 class="section-title">Custom Floral Designs</h2>
+        <div class="content-box service-item" data-category="custom">
+            <h2 class="section-title">🎨 Custom Floral Designs</h2>
             <div class="image-gallery">
                 <div class="gallery-item">
-                    <img src="/Assests/Image 8.jpeg" alt="Custom wedding arch">
-                    <div class="gallery-caption">Custom Wedding Arch</div>
+                    <img src="/Assests/Image 8.jpeg  " alt="Custom wedding arch design" class="gallery-image"
+                         onclick="openLightbox(' /Assests/Image 8.jpeg ', 'Custom Wedding Arch - Eleve Flowers')">
+                    <div class="gallery-caption">
+                        <h3>Custom Wedding Arch</h3>
+                        <p>Custom Pricing</p>
+                        <button class="btn" onclick="scrollToEnquiry()">Design Now</button>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/Assests/Flower 3.jpeg" alt="Special event flowers">
-                    <div class="gallery-caption">Special Event Flowers</div>
+                    <img src="/Assests/Flower 3.jpeg  " alt="Special event flower arrangements" class="gallery-image"
+                         onclick="openLightbox(' /Assests/Flower 3.jpeg ', 'Special Event Flowers - Eleve Flowers')">
+                    <div class="gallery-caption">
+                        <h3>Special Event Flowers</h3>
+                        <p>Custom Pricing</p>
+                        <button class="btn" onclick="scrollToEnquiry()">Design Now</button>
+                    </div>
                 </div>
             </div>
-            <p>Unique arrangements tailored to your specific needs.</p>
-            <p><strong>Specialty flowers available:</strong></p>
-            <ol>
-                <li>Proteas (South African favorite)</li>
-                <li>Exotic Orchids</li>
-                <li>Chrysanthemums</li>
-                <li>Mixed Wildflowers</li>
-            </ol>
+            
+            <div class="accordion">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    ✨ Custom Design Process
+                </div>
+                <div class="accordion-content">
+                    <p>Unique arrangements tailored to your specific needs and vision. Our design process ensures your complete satisfaction.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 15px;">
+                        <div style="flex: 1; min-width: 200px;">
+                            <h4 style="color: #8a2be2;">Specialty Flowers</h4>
+                            <ul>
+                                <li>Proteas (South African favorite)</li>
+                                <li>Exotic Orchids</li>
+                                <li>Chrysanthemums</li>
+                                <li>Mixed Wildflowers</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <h4 style="color: #8a2be2;">Design Steps</h4>
+                            <ol>
+                                <li>Initial Consultation</li>
+                                <li>Concept Development</li>
+                                <li>Sample Presentation</li>
+                                <li>Final Execution</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Price List -->
+        <!-- Interactive Price Calculator -->
         <div class="content-box">
-            <h2 class="section-title">Service Pricing</h2>
+            <h2 class="section-title">💰 Service Pricing & Quick Quote</h2>
             
             <div style="display: flex; flex-wrap: wrap; gap: 30px; margin: 20px 0;">
                 <div style="flex: 1; min-width: 250px;">
-                    <h3 style="color: #8a2be2; margin-bottom: 15px;">Bouquets</h3>
+                    <h3 style="color: #8a2be2; margin-bottom: 15px;">💐 Bouquets</h3>
                     <ul>
-                        <li>Small Bouquet (10 stems): R250</li>
-                        <li>Medium Bouquet (20 stems): R450</li>
-                        <li>Large Bouquet (30 stems): R700</li>
+                        <li>Small Bouquet (10 stems): <strong>R250</strong></li>
+                        <li>Medium Bouquet (20 stems): <strong>R450</strong></li>
+                        <li>Large Bouquet (30 stems): <strong>R700</strong></li>
                     </ul>
+                    <button class="btn" style="margin-top: 10px; width: 100%;" onclick="addToQuote('Small Bouquet', 250)">Add to Quote</button>
                 </div>
                 
                 <div style="flex: 1; min-width: 250px;">
-                    <h3 style="color: #8a2be2; margin-bottom: 15px;">Wedding Packages</h3>
+                    <h3 style="color: #8a2be2; margin-bottom: 15px;">💍 Wedding Packages</h3>
                     <ul>
-                        <li>Bridal Bouquet: R2000</li>
-                        <li>Bridesmaid Bouquets: R800 each</li>
-                        <li>Centerpieces: R500 each</li>
+                        <li>Bridal Bouquet: <strong>R2,000</strong></li>
+                        <li>Bridesmaid Bouquets: <strong>R800 each</strong></li>
+                        <li>Centerpieces: <strong>R500 each</strong></li>
                     </ul>
+                    <button class="btn" style="margin-top: 10px; width: 100%;" onclick="addToQuote('Bridal Bouquet', 2000)">Add to Quote</button>
                 </div>
                 
                 <div style="flex: 1; min-width: 250px;">
-                    <h3 style="color: #8a2be2; margin-bottom: 15px;">Delivery</h3>
+                    <h3 style="color: #8a2be2; margin-bottom: 15px;">🚚 Delivery</h3>
                     <ul>
-                        <li>Standard Delivery: R100</li>
-                        <li>Same-Day Delivery: R200</li>
+                        <li>Standard Delivery: <strong>R100</strong></li>
+                        <li>Same-Day Delivery: <strong>R200</strong></li>
                     </ul>
+                    <button class="btn" style="margin-top: 10px; width: 100%;" onclick="addToQuote('Standard Delivery', 100)">Add to Quote</button>
                 </div>
             </div>
 
-            <div class="text-center" style="margin-top: 20px; padding: 15px; background-color: #f8f5ff; border-radius: 5px;">
-                <p style="font-weight: bold; color: #8a2be2; margin: 0;">
-                    Special occasions have special prices! Contact us for custom quotes.
+            <!-- Quote Calculator -->
+            <div style="background: #f8f5ff; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                <h3 style="color: #8a2be2; margin-bottom: 15px;">Your Quote Summary</h3>
+                <div id="quoteItems" style="margin-bottom: 15px; min-height: 50px;">
+                    <p style="color: #666; text-align: center;">No items added yet</p>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong id="quoteTotal" style="color: #8a2be2; font-size: 1.2em;">Total: R0</strong>
+                    <button class="btn" onclick="clearQuote()">Clear Quote</button>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 20px; padding: 20px; background-color: #f0e6ff; border-radius: 10px; border-left: 4px solid #8a2be2;">
+                <p style="font-weight: bold; color: #8a2be2; margin: 0 0 10px 0; font-size: 1.1em;">
+                    💫 Special occasions have special prices! Contact us for custom quotes.
                 </p>
                 <a href="enquiry.html" class="btn" style="margin-top: 10px;">Get a Custom Quote</a>
+            </div>
+        </div>
+
+        <!-- Service Comparison Table -->
+        <div class="content-box">
+            <h2 class="section-title">📊 Service Comparison</h2>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <thead>
+                        <tr style="background: #8a2be2; color: white;">
+                            <th style="padding: 15px; text-align: left;">Service</th>
+                            <th style="padding: 15px; text-align: center;">Starting Price</th>
+                            <th style="padding: 15px; text-align: center;">Delivery Time</th>
+                            <th style="padding: 15px; text-align: center;">Best For</th>
+                            <th style="padding: 15px; text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e0e0e0;">
+                            <td style="padding: 15px;"><strong>Handcrafted Bouquets</strong></td>
+                            <td style="padding: 15px; text-align: center;">R250</td>
+                            <td style="padding: 15px; text-align: center;">Same Day</td>
+                            <td style="padding: 15px; text-align: center;">Gifts & Occasions</td>
+                            <td style="padding: 15px; text-align: center;"><button class="btn" onclick="scrollToEnquiry()">Order</button></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0e0e0;">
+                            <td style="padding: 15px;"><strong>Wedding Arrangements</strong></td>
+                            <td style="padding: 15px; text-align: center;">R2,000</td>
+                            <td style="padding: 15px; text-align: center;">2-4 Weeks</td>
+                            <td style="padding: 15px; text-align: center;">Weddings & Events</td>
+                            <td style="padding: 15px; text-align: center;"><button class="btn" onclick="scrollToEnquiry()">Plan</button></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0e0e0;">
+                            <td style="padding: 15px;"><strong>Flower Subscriptions</strong></td>
+                            <td style="padding: 15px; text-align: center;">R400/month</td>
+                            <td style="padding: 15px; text-align: center;">Weekly</td>
+                            <td style="padding: 15px; text-align: center;">Regular Refresh</td>
+                            <td style="padding: 15px; text-align: center;"><button class="btn" onclick="showSubscriptionModal()">Subscribe</button></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px;"><strong>Custom Designs</strong></td>
+                            <td style="padding: 15px; text-align: center;">Custom</td>
+                            <td style="padding: 15px; text-align: center;">1-3 Weeks</td>
+                            <td style="padding: 15px; text-align: center;">Unique Events</td>
+                            <td style="padding: 15px; text-align: center;"><button class="btn" onclick="scrollToEnquiry()">Design</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -166,6 +367,234 @@
     <footer>
         <p>&copy; 2025 Eleve Flowers - Where Petals Meet Elegance. All rights reserved.</p>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption" style="color: white; text-align: center; margin-top: 15px; font-size: 1.2em;"></div>
+    </div>
+
+    <!-- Subscription Modal -->
+    <div id="subscriptionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSubscriptionModal()">&times;</span>
+            <h2 style="color: #8a2be2; text-align: center; margin-bottom: 20px;">🌸 Flower Subscription</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Choose your perfect subscription plan:</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px;">
+                <div style="text-align: center; padding: 20px; background: #f8f5ff; border-radius: 10px; border: 2px solid #8a2be2;">
+                    <h3>Weekly</h3>
+                    <p style="font-size: 1.5em; color: #8a2be2; font-weight: bold;">R800/month</p>
+                    <p>Fresh flowers every week</p>
+                    <button class="btn" style="margin-top: 10px; width: 100%;" onclick="selectSubscription('Weekly', 800)">Select</button>
+                </div>
+                <div style="text-align: center; padding: 20px; background: #f8f5ff; border-radius: 10px;">
+                    <h3>Bi-weekly</h3>
+                    <p style="font-size: 1.5em; color: #8a2be2; font-weight: bold;">R600/month</p>
+                    <p>Flowers every 2 weeks</p>
+                    <button class="btn" style="margin-top: 10px; width: 100%;" onclick="selectSubscription('Bi-weekly', 600)">Select</button>
+                </div>
+                <div style="text-align: center; padding: 20px; background: #f8f5ff; border-radius: 10px;">
+                    <h3>Monthly</h3>
+                    <p style="font-size: 1.5em; color: #8a2be2; font-weight: bold;">R400/month</p>
+                    <p>Monthly floral refresh</p>
+                    <button class="btn" style="margin-top: 10px; width: 100%;" onclick="selectSubscription('Monthly', 400)">Select</button>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <button class="btn" onclick="closeSubscriptionModal()" style="background: #6c757d;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Service Filtering
+        function filterServices(category) {
+            const services = document.querySelectorAll('.service-item');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter services
+            services.forEach(service => {
+                if (category === 'all' || service.dataset.category === category) {
+                    service.style.display = 'block';
+                    setTimeout(() => {
+                        service.style.opacity = '1';
+                        service.style.transform = 'translateY(0)';
+                    }, 100);
+                } else {
+                    service.style.opacity = '0';
+                    service.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        service.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Image Lightbox
+        function openLightbox(imageSrc, caption) {
+            document.getElementById('lightbox').style.display = "block";
+            document.getElementById('lightbox-img').src = imageSrc;
+            document.getElementById('lightbox-caption').textContent = caption;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = "none";
+        }
+
+        // Accordion Functionality
+        function toggleAccordion(header) {
+            const accordion = header.parentElement;
+            const content = header.nextElementSibling;
+            
+            // Close all other accordions
+            const allAccordions = document.querySelectorAll('.accordion');
+            allAccordions.forEach(acc => {
+                if (acc !== accordion) {
+                    acc.classList.remove('active');
+                    acc.querySelector('.accordion-content').style.maxHeight = null;
+                }
+            });
+            
+            // Toggle current accordion
+            accordion.classList.toggle('active');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+
+        // Quote Calculator
+        let quoteItems = [];
+        let totalAmount = 0;
+
+        function addToQuote(item, price) {
+            quoteItems.push({ item, price });
+            totalAmount += price;
+            updateQuoteDisplay();
+            showNotification(`"${item}" added to quote!`);
+        }
+
+        function updateQuoteDisplay() {
+            const quoteItemsElement = document.getElementById('quoteItems');
+            const quoteTotalElement = document.getElementById('quoteTotal');
+            
+            if (quoteItems.length === 0) {
+                quoteItemsElement.innerHTML = '<p style="color: #666; text-align: center;">No items added yet</p>';
+            } else {
+                quoteItemsElement.innerHTML = quoteItems.map((item, index) => `
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #e0e0e0;">
+                        <span>${item.item}</span>
+                        <div>
+                            <span style="color: #8a2be2; font-weight: bold;">R${item.price}</span>
+                            <button onclick="removeFromQuote(${index})" style="margin-left: 10px; background: #dc3545; color: white; border: none; padding: 2px 8px; border-radius: 3px; cursor: pointer;">×</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            quoteTotalElement.textContent = `Total: R${totalAmount}`;
+        }
+
+        function removeFromQuote(index) {
+            totalAmount -= quoteItems[index].price;
+            quoteItems.splice(index, 1);
+            updateQuoteDisplay();
+        }
+
+        function clearQuote() {
+            quoteItems = [];
+            totalAmount = 0;
+            updateQuoteDisplay();
+            showNotification('Quote cleared!');
+        }
+
+        // Subscription Modal
+        function showSubscriptionModal() {
+            document.getElementById('subscriptionModal').style.display = "block";
+        }
+
+        function closeSubscriptionModal() {
+            document.getElementById('subscriptionModal').style.display = "none";
+        }
+
+        function selectSubscription(plan, price) {
+            addToQuote(`${plan} Subscription`, price);
+            closeSubscriptionModal();
+        }
+
+        // Navigation
+        function scrollToEnquiry() {
+            window.location.href = 'enquiry.html';
+        }
+
+        // Notification System
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #28a745;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 5px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                z-index: 1000;
+                transform: translateX(400px);
+                transition: transform 0.3s ease;
+            `;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Animate out and remove
+            setTimeout(() => {
+                notification.style.transform = 'translateX(400px)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const lightbox = document.getElementById('lightbox');
+            const subscriptionModal = document.getElementById('subscriptionModal');
+            
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+            if (event.target === subscriptionModal) {
+                closeSubscriptionModal();
+            }
+        }
+
+        // Initialize accordions to be closed
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordions = document.querySelectorAll('.accordion');
+            accordions.forEach(accordion => {
+                accordion.classList.remove('active');
+                accordion.querySelector('.accordion-content').style.maxHeight = null;
+            });
+        });
+    </script>
+
+ 
 </body>
 </html>
-         

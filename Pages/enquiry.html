@@ -1,76 +1,513 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-ZA">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make an Enquiry - Eleve Flowers</title>
-    <link rel="stylesheet" href="/css/styles.css">
-
+    <title>Make an Enquiry - Eleve Flowers | Get a Quote for Floral Arrangements</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Make an enquiry with Eleve Flowers for custom floral arrangements, wedding flowers, and bouquets in Johannesburg. Get a personalized quote today.">
+    <meta name="keywords" content="floral enquiry, wedding flowers quote, custom bouquet Johannesburg, flower arrangement enquiry, Eleve Flowers contact">
+    <meta name="author" content="Eleve Flowers">
 </head>
 <body  background="/Assests/Back ground.jpg">
-
-     <header>
+    <header>
         <div class="header-content">
-            <img src="/Assests/Logo.jpg" alt="Eleve Flowers Logo" class="logo" width="120" height="120">
-         <nav style="margin-top: 15px;">
-            <a href="../index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
-            <a href="about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
-            <a href="services.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Services</a>
-            <a href="enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
-            <a href="contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
-        </nav>    
+            <img src="/Assests/Logo.jpg" alt="Eleve Flowers Logo - Premium floral design company" class="logo" width="120" height="120">
+            <nav style="margin-top: 15px;">
+                <a href="../index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
+                <a href="about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
+                <a href="services.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Services</a>
+                <a href="enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
+                <a href="contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
+            </nav>    
         </div>
     </header>
 
     <main style="max-width: 1200px; margin: 0 auto; padding: 20px;">
-        <h1 style="color: blueviolet; text-align: center;">MAKE AN ENQUIRY</h1>
+        <h1 style="color: blueviolet; text-align: center; margin-bottom: 10px;">MAKE AN ENQUIRY</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">Complete the form below and we'll get back to you within 24 hours with a personalized quote</p>
         
-        <section style="background-color: white; padding: 30px; border-radius: 10px;">
-            <h2 style="color: blueviolet;">Request a Quote</h2>
-            <p>Please fill out the form below and we'll get back to you within 24 hours.</p>
+        <!-- Enquiry Progress Indicator -->
+        <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 15px;">
+                <div style="background: #8a2be2; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</div>
+                <div style="height: 3px; background: #8a2be2; flex: 1; max-width: 100px;"></div>
+                <div style="background: #8a2be2; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">2</div>
+                <div style="height: 3px; background: #e0e0e0; flex: 1; max-width: 100px;"></div>
+                <div style="background: #e0e0e0; color: #666; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">3</div>
+            </div>
+            <p style="color: #8a2be2; font-weight: bold;">Step 1: Contact Details → Step 2: Service Selection → Step 3: Review & Submit</p>
+        </div>
+        
+        <section style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h2 style="color: blueviolet; margin-bottom: 10px;">Request a Quote</h2>
+            <p style="margin-bottom: 25px;">Please fill out the form below and we'll get back to you within 24 hours with a personalized quote for your floral needs.</p>
             
-            <!-- Simple Enquiry Form -->
-            <form style="margin-top: 20px;">
-                <div style="margin-bottom: 15px;">
-                    <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Full Name:</label>
-                    <input type="text" id="name" name="name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+            <!-- Enhanced Enquiry Form -->
+            <form id="enquiryForm" style="margin-top: 20px;" onsubmit="validateEnquiryForm(event)">
+                <!-- Contact Information Section -->
+                <div style="background: #f8f5ff; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                    <h3 style="color: blueviolet; margin-bottom: 15px;">📞 Contact Information</h3>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 15px;">
+                        <div>
+                            <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Full Name *</label>
+                            <input type="text" id="name" name="name" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1em; transition: border-color 0.3s ease;"
+                                   onblur="validateField('name')">
+                            <div class="error-message" id="name-error" style="color: #dc3545; font-size: 0.9em; margin-top: 5px; display: none;"></div>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1em; transition: border-color 0.3s ease;"
+                                   onblur="validateField('phone')" placeholder="065 896 6276">
+                            <div class="error-message" id="phone-error" style="color: #dc3545; font-size: 0.9em; margin-top: 5px; display: none;"></div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Email Address *</label>
+                        <input type="email" id="email" name="email" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1em; transition: border-color 0.3s ease;"
+                               onblur="validateField('email')" placeholder="your.email@example.com">
+                        <div class="error-message" id="email-error" style="color: #dc3545; font-size: 0.9em; margin-top: 5px; display: none;"></div>
+                    </div>
+                </div>
+
+                <!-- Service Selection Section -->
+                <div style="background: #f8f5ff; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                    <h3 style="color: blueviolet; margin-bottom: 15px;">💐 Service Details</h3>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label for="service" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Service Needed *</label>
+                        <select id="service" name="service" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1em; transition: border-color 0.3s ease;"
+                                onchange="showAdditionalFields(this.value)">
+                            <option value="">Select a service</option>
+                            <option value="bouquet">Handcrafted Bouquet</option>
+                            <option value="wedding">Wedding Arrangements</option>
+                            <option value="subscription">Flower Subscription</option>
+                            <option value="custom">Custom Design</option>
+                            <option value="event">Event Flowers</option>
+                            <option value="corporate">Corporate Arrangements</option>
+                        </select>
+                        <div class="error-message" id="service-error" style="color: #dc3545; font-size: 0.9em; margin-top: 5px; display: none;"></div>
+                    </div>
+
+                    <!-- Dynamic Fields Based on Service Selection -->
+                    <div id="additionalFields" style="display: none; margin-top: 15px; padding: 15px; background: white; border-radius: 5px; border-left: 4px solid #8a2be2;">
+                        <!-- Fields will be dynamically inserted here -->
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="eventDate" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Event Date (if applicable)</label>
+                        <input type="date" id="eventDate" name="eventDate" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1em;"
+                               min="<?php echo date('Y-m-d'); ?>">
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="budget" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Budget Range (ZAR)</label>
+                        <select id="budget" name="budget" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1em;">
+                            <option value="">Select budget range</option>
+                            <option value="200-500">R200 - R500</option>
+                            <option value="500-1000">R500 - R1,000</option>
+                            <option value="1000-2500">R1,000 - R2,500</option>
+                            <option value="2500-5000">R2,500 - R5,000</option>
+                            <option value="5000+">R5,000+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Flower Preferences Section -->
+                <div style="background: #f8f5ff; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                    <h3 style="color: blueviolet; margin-bottom: 15px;">🌸 Flower Preferences</h3>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 10px; font-weight: bold; color: #333;">Preferred Flower Types</label>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" name="flowers" value="roses" style="margin: 0;"> Roses
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" name="flowers" value="lilies" style="margin: 0;"> Lilies
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" name="flowers" value="tulips" style="margin: 0;"> Tulips
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" name="flowers" value="sunflowers" style="margin: 0;"> Sunflowers
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" name="flowers" value="orchids" style="margin: 0;"> Orchids
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" name="flowers" value="succulents" style="margin: 0;"> Succulents
+                            </label>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 10px; font-weight: bold; color: #333;">Color Preferences</label>
+                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; cursor: pointer;">
+                                <input type="checkbox" name="colors" value="red" style="margin: 0;">
+                                <span style="display: inline-block; width: 20px; height: 20px; background: #ff6b6b; border-radius: 50%;"></span> Red
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; cursor: pointer;">
+                                <input type="checkbox" name="colors" value="pink" style="margin: 0;">
+                                <span style="display: inline-block; width: 20px; height: 20px; background: #ff9ff3; border-radius: 50%;"></span> Pink
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; cursor: pointer;">
+                                <input type="checkbox" name="colors" value="white" style="margin: 0;">
+                                <span style="display: inline-block; width: 20px; height: 20px; background: white; border: 1px solid #ccc; border-radius: 50%;"></span> White
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; cursor: pointer;">
+                                <input type="checkbox" name="colors" value="purple" style="margin: 0;">
+                                <span style="display: inline-block; width: 20px; height: 20px; background: #8a2be2; border-radius: 50%;"></span> Purple
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; cursor: pointer;">
+                                <input type="checkbox" name="colors" value="yellow" style="margin: 0;">
+                                <span style="display: inline-block; width: 20px; height: 20px; background: #ffd93d; border-radius: 50%;"></span> Yellow
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message Section -->
+                <div style="background: #f8f5ff; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                    <h3 style="color: blueviolet; margin-bottom: 15px;">💬 Additional Information</h3>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Message *</label>
+                        <textarea id="message" name="message" rows="6" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1em; transition: border-color 0.3s ease; resize: vertical;"
+                                  placeholder="Please provide details about your floral needs, including any specific requirements, occasion details, and preferred style..."
+                                  onblur="validateField('message')"></textarea>
+                        <div class="error-message" id="message-error" style="color: #dc3545; font-size: 0.9em; margin-top: 5px; display: none;"></div>
+                        <div style="text-align: right; margin-top: 5px;">
+                            <span id="charCount">0</span>/500 characters
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="reference" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Reference Images (URLs)</label>
+                        <textarea id="reference" name="reference" rows="3" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1em; resize: vertical;"
+                                  placeholder="Paste links to any reference images or Pinterest boards..."></textarea>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="1" checked style="margin: 0;">
+                        <label for="newsletter" style="margin: 0; cursor: pointer;">Subscribe to our newsletter for floral tips and special offers</label>
+                    </div>
                 </div>
                 
-                <div style="margin-bottom: 15px;">
-                    <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email Address:</label>
-                    <input type="email" id="email" name="email" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
-                </div>
-                
-                <div style="margin-bottom: 15px;">
-                    <label for="phone" style="display: block; margin-bottom: 5px; font-weight: bold;">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
-                </div>
-                
-                <div style="margin-bottom: 15px;">
-                    <label for="service" style="display: block; margin-bottom: 5px; font-weight: bold;">Service Needed:</label>
-                    <select id="service" name="service" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
-                        <option value="">Select a service</option>
-                        <option value="bouquet">Handcrafted Bouquet</option>
-                        <option value="wedding">Wedding Arrangements</option>
-                        <option value="subscription">Flower Subscription</option>
-                        <option value="custom">Custom Design</option>
-                        <option value="event">Event Flowers</option>
-                    </select>
-                </div>
-                
-                <div style="margin-bottom: 15px;">
-                    <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Message:</label>
-                    <textarea id="message" name="message" rows="5" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Please provide details about your floral needs..."></textarea>
-                </div>
-                
-                <button type="submit" style="background-color: blueviolet; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">Submit Enquiry</button>
+                <button type="submit" style="background-color: blueviolet; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1.1em; width: 100%; transition: all 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#7a1bd2'" onmouseout="this.style.backgroundColor='blueviolet'">
+                    Submit Enquiry
+                </button>
             </form>
         </section>
+
+        <!-- Quick Contact Info -->
+        <div style="background: white; padding: 20px; border-radius: 10px; margin-top: 30px; text-align: center;">
+            <h3 style="color: blueviolet; margin-bottom: 15px;">Need Immediate Assistance?</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div>
+                    <div style="font-size: 2em; margin-bottom: 10px;">📞</div>
+                    <p style="margin: 0; font-weight: bold;">Call Us</p>
+                    <p style="margin: 5px 0; color: #666;">065 896 6276</p>
+                    <button onclick="window.open('tel:0658966276')" style="background: #28a745; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 0.9em;">Call Now</button>
+                </div>
+                <div>
+                    <div style="font-size: 2em; margin-bottom: 10px;">📧</div>
+                    <p style="margin: 0; font-weight: bold;">Email Us</p>
+                    <p style="margin: 5px 0; color: #666;">info@eleveflowers.co.za</p>
+                    <button onclick="window.open('mailto:info@eleveflowers.co.za')" style="background: #17a2b8; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 0.9em;">Email Now</button>
+                </div>
+                <div>
+                    <div style="font-size: 2em; margin-bottom: 10px;">💬</div>
+                    <p style="margin: 0; font-weight: bold;">WhatsApp</p>
+                    <p style="margin: 5px 0; color: #666;">065 896 6276</p>
+                    <button onclick="openWhatsApp()" style="background: #25d366; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 0.9em;">Message Us</button>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer style="background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 40px;">
         <p>&copy; 2025 Eleve Flowers - Where Petals Meet Elegance. All rights reserved.</p>
     </footer>
 
+    <!-- Success Modal -->
+    <div id="successModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+        <div style="background: white; padding: 40px; border-radius: 15px; text-align: center; max-width: 500px; width: 90%;">
+            <div style="font-size: 4em; margin-bottom: 20px;">💐</div>
+            <h2 style="color: blueviolet; margin-bottom: 15px;">Enquiry Sent Successfully!</h2>
+            <p style="margin-bottom: 20px; line-height: 1.6;">Thank you for your enquiry! We've received your details and will contact you within 24 hours with a personalized quote.</p>
+            <div style="background: #f8f5ff; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
+                <p style="margin: 0 0 10px 0; font-weight: bold;">What happens next?</p>
+                <ul style="margin: 0; padding-left: 20px;">
+                    <li>We'll review your requirements</li>
+                    <li>Create a custom quote</li>
+                    <li>Contact you to discuss details</li>
+                    <li>Finalize your floral arrangement</li>
+                </ul>
+            </div>
+            <button onclick="closeSuccessModal()" style="background-color: blueviolet; color: white; padding: 12px 25px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Form Validation Functions
+        function validateField(fieldName) {
+            const field = document.getElementById(fieldName);
+            const errorElement = document.getElementById(fieldName + '-error');
+            
+            // Clear previous error
+            field.style.borderColor = '#e0e0e0';
+            errorElement.style.display = 'none';
+            
+            let isValid = true;
+            let errorMessage = '';
+            
+            switch(fieldName) {
+                case 'name':
+                    if (field.value.trim() === '') {
+                        errorMessage = 'Please enter your full name';
+                        isValid = false;
+                    } else if (field.value.trim().length < 2) {
+                        errorMessage = 'Name must be at least 2 characters long';
+                        isValid = false;
+                    }
+                    break;
+                    
+                case 'email':
+                    if (field.value.trim() === '') {
+                        errorMessage = 'Please enter your email address';
+                        isValid = false;
+                    } else if (!isValidEmail(field.value)) {
+                        errorMessage = 'Please enter a valid email address';
+                        isValid = false;
+                    }
+                    break;
+                    
+                case 'phone':
+                    if (field.value.trim() === '') {
+                        errorMessage = 'Please enter your phone number';
+                        isValid = false;
+                    } else if (!isValidPhone(field.value)) {
+                        errorMessage = 'Please enter a valid South African phone number';
+                        isValid = false;
+                    }
+                    break;
+                    
+                case 'service':
+                    if (field.value === '') {
+                        errorMessage = 'Please select a service';
+                        isValid = false;
+                    }
+                    break;
+                    
+                case 'message':
+                    if (field.value.trim() === '') {
+                        errorMessage = 'Please enter your message';
+                        isValid = false;
+                    } else if (field.value.trim().length < 10) {
+                        errorMessage = 'Message must be at least 10 characters long';
+                        isValid = false;
+                    }
+                    break;
+            }
+            
+            if (!isValid) {
+                field.style.borderColor = '#dc3545';
+                errorElement.textContent = errorMessage;
+                errorElement.style.display = 'block';
+            } else {
+                field.style.borderColor = '#28a745';
+            }
+            
+            return isValid;
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function isValidPhone(phone) {
+            // South African phone number validation (simple version)
+            const phoneRegex = /^(\+27|0)[6-8][0-9]{8}$/;
+            return phoneRegex.test(phone.replace(/\s/g, ''));
+        }
+
+        // Character Counter for Message
+        document.getElementById('message').addEventListener('input', function() {
+            const count = this.value.length;
+            document.getElementById('charCount').textContent = count;
+            
+            if (count > 500) {
+                this.style.borderColor = '#dc3545';
+            } else if (count > 0) {
+                this.style.borderColor = '#28a745';
+            } else {
+                this.style.borderColor = '#e0e0e0';
+            }
+        });
+
+        // Dynamic Form Fields Based on Service Selection
+        function showAdditionalFields(service) {
+            const additionalFields = document.getElementById('additionalFields');
+            additionalFields.innerHTML = '';
+            additionalFields.style.display = 'none';
+            
+            let html = '';
+            
+            switch(service) {
+                case 'wedding':
+                    html = `
+                        <h4 style="color: blueviolet; margin-bottom: 10px;">💍 Wedding Details</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Wedding Date</label>
+                                <input type="date" name="weddingDate" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Guest Count</label>
+                                <input type="number" name="guestCount" placeholder="Approximate number" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                            </div>
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Wedding Venue</label>
+                            <input type="text" name="venue" placeholder="Venue name and location" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                        </div>
+                    `;
+                    break;
+                    
+                case 'event':
+                    html = `
+                        <h4 style="color: blueviolet; margin-bottom: 10px;">🎉 Event Details</h4>
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Event Type</label>
+                            <select name="eventType" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                                <option value="">Select event type</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="baby_shower">Baby Shower</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Venue Size</label>
+                            <select name="venueSize" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                                <option value="">Select venue size</option>
+                                <option value="small">Small (1-50 people)</option>
+                                <option value="medium">Medium (50-150 people)</option>
+                                <option value="large">Large (150+ people)</option>
+                            </select>
+                        </div>
+                    `;
+                    break;
+                    
+                case 'subscription':
+                    html = `
+                        <h4 style="color: blueviolet; margin-bottom: 10px;">📅 Subscription Preferences</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Subscription Type</label>
+                                <select name="subscriptionType" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                                    <option value="">Select type</option>
+                                    <option value="weekly">Weekly</option>
+                                    <option value="biweekly">Bi-weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Duration</label>
+                                <select name="subscriptionDuration" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                                    <option value="">Select duration</option>
+                                    <option value="1">1 Month</option>
+                                    <option value="3">3 Months</option>
+                                    <option value="6">6 Months</option>
+                                    <option value="12">12 Months</option>
+                                </select>
+                            </div>
+                        </div>
+                    `;
+                    break;
+            }
+            
+            if (html) {
+                additionalFields.innerHTML = html;
+                additionalFields.style.display = 'block';
+            }
+        }
+
+        // Form Submission
+        function validateEnquiryForm(event) {
+            event.preventDefault();
+            
+            // Validate all required fields
+            const fields = ['name', 'email', 'phone', 'service', 'message'];
+            let isValid = true;
+            
+            fields.forEach(field => {
+                if (!validateField(field)) {
+                    isValid = false;
+                }
+            });
+            
+            if (isValid) {
+                // Show loading state
+                const submitButton = event.target.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                // Simulate form submission (in real implementation, this would be an API call)
+                setTimeout(() => {
+                    showSuccessModal();
+                    document.getElementById('enquiryForm').reset();
+                    document.getElementById('charCount').textContent = '0';
+                    document.getElementById('additionalFields').style.display = 'none';
+                    
+                    // Reset button
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                }, 2000);
+            } else {
+                // Scroll to first error
+                const firstError = document.querySelector('.error-message[style*="display: block"]');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        }
+
+        // Success Modal Functions
+        function showSuccessModal() {
+            document.getElementById('successModal').style.display = 'flex';
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+
+        // WhatsApp Function
+        function openWhatsApp() {
+            const message = encodeURIComponent('Hello Eleve Flowers! I would like to enquire about your floral arrangements.');
+            window.open(`https://wa.me/27658966276?text=${message}`, '_blank');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('successModal');
+            if (event.target === modal) {
+                closeSuccessModal();
+            }
+        }
+    </script>
+
+     
 </body>
 </html>

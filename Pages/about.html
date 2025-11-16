@@ -4,31 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Eleve Flowers</title>
-     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about Eleve Flowers' story, our founder Sarah Johnson, and our passionate team of florists in Johannesburg.">
+    <meta name="keywords" content="about Eleve Flowers, our story, Sarah Johnson, floral designers Johannesburg">
 </head>
-<body background="/Assests/Back ground.jpg">
+<body   background="/Assests/Back ground.jpg">
     <header>
         <div class="header-content">
-            <img src="/Assests/Logo.jpg" alt="Eleve Flowers Logo" class="logo" width="120" height="120">
-         <nav style="margin-top: 15px;">
-            <a href="../index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
-            <a href="about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
-            <a href="services.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Services</a>
-            <a href="enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
-            <a href="contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
-        </nav>    
+             <img src="/Assests/Logo.jpg" alt="Eleve Flowers Logo" class="logo" width="120" height="120">
+            <nav style="margin-top: 15px;">
+                <a href="../index.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Home</a>
+                <a href="about.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">About Us</a>
+                <a href="services.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Services</a>
+                <a href="enquiry.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Enquiry</a>
+                <a href="contact.html" style="margin: 0 15px; text-decoration: none; color: blueviolet; font-weight: bold;">Contact</a>
+            </nav>    
         </div>
     </header>
 
     <main>
         <h1 class="page-title">About Eleve Flowers</h1>
         
-        <!-- Founder Section -->
+        <!-- Founder Section with Modal -->
         <div class="content-box">
             <h2 class="section-title">Meet Our Founder</h2>
             <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 20px 0;">
                 <div style="flex: 1; min-width: 250px; text-align: center;">
-                    <img src="/Assests/Founder.jpeg" alt="Founder of Eleve Flowers" style="width: 100%; max-width: 300px; border-radius: 10px; margin: 0 auto;">
+                    <img src="/Assests/Founder.jpeg" alt="Founder of Eleve Flowers" style="width: 100%; max-width: 300px; border-radius: 10px; margin: 0 auto; cursor: pointer;" 
+                         onclick="openTeamModal('Sarah Johnson', 'Founder & Head Florist', 'Sarah founded Eleve Flowers in 2020 with a passion for bringing beauty into everyday life through floral artistry.', '../Assets/Founder.jpeg')">
                     <p style="margin-top: 10px; font-style: italic;">Sarah Johnson - Founder & Head Florist</p>
                 </div>
                 <div style="flex: 2; min-width: 300px;">
@@ -37,65 +42,13 @@
             </div>
         </div>
 
-        <!-- Our Story Section -->
-        <div class="content-box">
-            <h2 class="section-title">Our Story</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; margin: 20px 0;">
-                <div style="flex: 1; min-width: 300px;">
-                    <p>Eleve Flowers was born from Sarah's childhood memories of her grandmother's garden. The name "Eleve" (meaning "elevated" in French) reflects our commitment to creating floral arrangements that elevate special moments and transform ordinary days into extraordinary memories.</p>
-                    <p>What started as a small home-based business has grown into Polokwane's premier floral destination, serving weddings, events, and daily floral needs with the same passion and attention to detail that inspired our beginning.</p>
-                </div>
-                <div style="flex: 1; min-width: 250px; text-align: center;">
-                    <img src="/Assests/Flower 5.jpeg" alt="The inspiration behind Eleve Flowers" style="width: 100%; max-width: 300px; border-radius: 10px; margin: 0 auto;">
-                    <p style="margin-top: 10px; font-style: italic;">The garden that started it all</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Our Inspiration Section -->
-        <div class="content-box">
-            <h2 class="section-title">What Inspires Us</h2>
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="/Assests/Flower 4.jpeg" alt="Nature inspiration">
-                    <div class="gallery-caption">The Beauty of Nature</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/Assests/Flower 6.jpeg" alt="Seasonal flowers">
-                    <div class="gallery-caption">Seasonal Blooms</div>
-                </div>           
-            </div>
-            <p>We draw inspiration from:</p>
-            <ul>
-                <li><strong>Nature's Palette:</strong> The changing seasons and natural beauty around us</li>
-                <li><strong>Client Stories:</strong> The special moments we help celebrate</li>
-                <li><strong>Local Community:</strong> Supporting South African flower growers</li>
-                <li><strong>Creative Innovation:</strong> Pushing boundaries in floral design</li>
-            </ul>
-        </div>
-
-        <!-- Customer Treatment Section -->
-        <div class="content-box">
-            <h2 class="section-title">Our Approach to Customer Care</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: 30px; margin: 20px 0;">
-                <div style="flex: 2; min-width: 300px;">
-                    <p>At Eleve Flowers, we believe every customer deserves exceptional treatment:</p>
-                    <ul>
-                        <li><strong>Personal Consultations:</strong> One-on-one meetings to understand your vision</li>
-                        <li><strong>Quality Guarantee:</strong> Only the freshest, most beautiful flowers</li>
-                        <li><strong>Flexible Services:</strong> Custom arrangements for every budget</li>
-                        <li><strong>After-Sales Support:</strong> We're here even after your event</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Our Team Section -->
+        <!-- Team Gallery with Modals -->
         <div class="content-box">
             <h2 class="section-title">Meet Our Team</h2>
             <div class="image-gallery">
                 <div class="gallery-item">
-                    <img src="/Assests/Worker.jpeg" alt="Young Florist">
+                    <img src="/Assests/Worker.jpeg" alt="Thato Malatjie - Young Florist" 
+                         onclick="openTeamModal('Thato Malatjie', 'Young Florist', 'Thato brings fresh perspectives and modern floral techniques to our team. Specializing in contemporary arrangements.', '../Assets/Worker.jpeg')">
                     <div class="gallery-caption">
                         <strong>Thato Malatjie</strong><br>
                         Young Florist<br>
@@ -103,7 +56,8 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/Assests/SPECIALIST.jpeg" alt="Wedding Specialist">
+                    <img src="/Assests/SPECIALIST.jpeg" alt="Maria Wilson - Wedding Specialist"
+                         onclick="openTeamModal('Maria Wilson', 'Wedding Specialist', 'Maria is our wedding expert with a decade of experience creating magical moments for couples.', '../Assets/SPECIALIST.jpeg')">
                     <div class="gallery-caption">
                         <strong>Maria Wilson</strong><br>
                         Wedding Specialist<br>
@@ -111,34 +65,44 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="/Assests/EMPLOYEE.jpeg" alt=" Young Customer Relations">
+                    <img src="/Assests/EMPLOYEE.jpeg" alt="Brenden Malatjie - Customer Relations"
+                         onclick="openTeamModal('Brenden Malatjie', 'Customer Relations', 'Brenden ensures every client receives exceptional service and support throughout their floral journey.', '../Assets/EMPLOYEE.jpeg')">
                     <div class="gallery-caption">
                         <strong>Brenden Malatjie</strong><br>
-                        Young Customer Relations<br>
-                        1 years experience
+                        Customer Relations<br>
+                        1 year experience
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Why Choose Us Section -->
+        <!-- FAQ Accordion -->
         <div class="content-box">
-            <h2 class="section-title">Why Choose Eleve Flowers?</h2>
-            <div class="contact-methods">
-                <div class="contact-method">
-                    <div class="contact-icon">🌿</div>
-                    <h3>Freshness Guaranteed</h3>
-                    <p>Daily deliveries from local growers ensure the freshest flowers</p>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion-system">
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        How long has Eleve Flowers been in business?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Eleve Flowers was founded in 2020 and has been serving the Johannesburg community with premium floral arrangements for over 4 years.</p>
+                    </div>
                 </div>
-                <div class="contact-method">
-                    <div class="contact-icon">💝</div>
-                    <h3>Personal Touch</h3>
-                    <p>Custom designs tailored to your specific needs and preferences</p>
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Do you source flowers locally?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes! We work with local South African flower growers to ensure the freshest blooms while supporting our local economy.</p>
+                    </div>
                 </div>
-                <div class="contact-method">
-                    <div class="contact-icon">🚚</div>
-                    <h3>Reliable Delivery</h3>
-                    <p>On-time delivery with careful handling of your arrangements</p>
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        What makes Eleve Flowers different?
+                    </div>
+                    <div class="accordion-content">
+                        <p>Our attention to detail, personalized service, and commitment to creating unique, handcrafted arrangements sets us apart.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,6 +111,66 @@
 
     <footer>
         <p>&copy; 2025 Eleve Flowers - Where Petals Meet Elegance. All rights reserved.</p>
+          
     </footer>
+
+    <!-- Team Member Modal -->
+    <div id="teamModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTeamModal()">&times;</span>
+            <img id="modal-image" src="" alt="" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; display: block;">
+            <h2 id="modal-name" style="color: #8a2be2; text-align: center;"></h2>
+            <h3 id="modal-position" style="color: #666; text-align: center;"></h3>
+            <p id="modal-bio" style="text-align: center; margin-top: 15px;"></p>
+        </div>
+    </div>
+
+    <script>
+        // Team Member Modal
+        function openTeamModal(name, position, bio, image) {
+            document.getElementById('teamModal').style.display = "block";
+            document.getElementById('modal-name').textContent = name;
+            document.getElementById('modal-position').textContent = position;
+            document.getElementById('modal-bio').textContent = bio;
+            document.getElementById('modal-image').src = image;
+        }
+
+        function closeTeamModal() {
+            document.getElementById('teamModal').style.display = "none";
+        }
+
+        // Accordion Functionality
+        function toggleAccordion(header) {
+            const accordion = header.parentElement;
+            const content = header.nextElementSibling;
+            
+            // Close all other accordions
+            const allAccordions = document.querySelectorAll('.accordion');
+            allAccordions.forEach(acc => {
+                if (acc !== accordion) {
+                    acc.classList.remove('active');
+                    acc.querySelector('.accordion-content').style.maxHeight = null;
+                }
+            });
+            
+            // Toggle current accordion
+            accordion.classList.toggle('active');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('teamModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+     
 </body>
 </html>
